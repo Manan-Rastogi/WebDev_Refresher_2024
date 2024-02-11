@@ -1,1 +1,1 @@
-alert('Welcome to 2024 WebDev Refresher.');
+// alert('Welcome to 2024 WebDev Refresher.');
