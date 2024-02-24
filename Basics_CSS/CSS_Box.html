@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        background-color: aquamarine;
+      }
+      /* 
+        Every element in html is a box for css 
+        GO TO Inspect > Element > Computed to see box model   -   Margin.Border.Padding 
+        margin collapse: box side by side or up-down with different margins will have there margin collapsed. Higher of 2 margins will be visible   
+        */
+      .box1 {
+        color: red;
+        height: 200px;
+        text-align: center;
+        margin: 20px;
+        border: 2px solid black;
+        padding: 20px;
+      }
+
+      .box2 {
+        color: rgb(252, 2, 252);
+        height: 200px;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px;
+        border: 2px solid black;
+        padding: 20px;
+        /* border box will include padding and border in size of box. Go to web page and inspect 2 boxex and their size to know the difference */
+        box-sizing: border-box;                                                  
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">This is a Box.</div>
+    <div class="box box2">This is another Box.</div>
+  </body>
+</html>
