@@ -80,3 +80,14 @@ Inline Elements (Most Commonly Used First)
 <data>: Machine-readable translation of content.
 <acronym>: Acronym (Not supported in HTML5).
 ```
+
+
+## CSS Specificity
+```
+Which style will win if we have multiple css on a single element? 
+
+https://www.codewithharry.com/tutorial/css-specificity/  
+
+Very Brief but incomplete ans -> *Important > Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector*
+```
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sizing Units | px rem em vh, vw, %</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid black;
+        box-sizing: border-box;
+        /* pixels as per pixels in computer screen.  */
+        /* A scroll bar will come if widht does not fit on user's screen.  */
+
+        /* width: 1920px;                         */
+
+        /* viewpoer width  - It will adjust to screen.*/
+        width: 80vw;
+        margin: 20px auto; /* Will centre block elements, inline elements width can not be set. */
+      }
+
+      .container {
+        border: 2px solid black;
+        box-sizing: border-box;
+        color: red;
+
+        /* height: 20vh; */
+        min-height: 80vh;
+        overflow: scroll;
+
+        font-size: 18px;                       /* default font size is 18 px  */
+      }
+
+      .container > p {
+        color: blue;
+        font-size: 2em;                       /* 2 times the inherited fone i.e 16*2 px */
+        /* rem is same as em but rem gives size acc to root element Eg html{ font-size: 12px;} */
+
+        /* percent width is from parent's width  */
+        width: 60%;                     
+      }
+
+      .new_container{
+        background-color: beige;
+        color: brown;
+        margin-top: 100px;
+        overflow: hidden;
+
+        /* vmin refers to whatever is min for device (height or width) and takes up values based on this. So it will have value acc to height on PC but acc to width on mobiles.*/
+        width: 50vmin;               
+        height: 40vmax;
+      }
+    </style>
+    <!-- FOR MORE UNITS VISIT MDC (UNITS)  -->
+  </head>
+  <body>
+    <div class="box">Some Box here.</div>
+
+    <div class="container">
+      Some Container here.
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+        aperiam rem. Temporibus explicabo quasi suscipit atque adipisci quidem
+        eum tempore est illo libero sunt repellendus tempora rem velit itaque
+        quis doloremque aliquid consequatur, unde maxime. Expedita, ea totam
+        vero iure consequatur omnis aut corporis perferendis, quae provident,
+        sint commodi dicta soluta quo impedit. Ullam exercitationem quis
+        corporis hic architecto atque eligendi, nihil aspernatur repellat
+        commodi adipisci impedit soluta minus eaque eius quas id veritatis
+        facere expedita maiores error? Tempora assumenda, ut laboriosam
+        cupiditate nesciunt harum necessitatibus, laudantium a libero ex alias
+        vitae numquam quidem dolore nulla, dolorem illum! Omnis, laborum!
+      </p>
+    </div>
+
+    <div class="new_container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur recusandae culpa temporibus magnam quos sint illo animi repellat? Molestias aut dolorem atque dolore distinctio enim, quae sit error cum exercitationem debitis aliquid magnam tempore, nobis perspiciatis. Eius minima quod consequuntur reiciendis voluptas dolor! Obcaecati cumque nemo quae veniam perspiciatis beatae, laborum ipsa iste at quasi laudantium iusto error unde quibusdam officia mollitia! Distinctio minima assumenda quam est aliquid modi. Ullam, sint et eveniet fugit maxime minima veniam nam ut possimus praesentium impedit ducimus, sunt aspernatur, asperiores atque perferendis a voluptates inventore eos labore. Cum numquam, et sapiente id sunt tempore? Suscipit aliquid est fuga quis minima dicta architecto autem, magni harum quisquam reiciendis nam optio magnam maiores excepturi, laudantium temporibus at? Deleniti ratione nobis debitis omnis, minus, illo placeat, tempora modi sed iste cumque ducimus non labore quasi sint nesciunt hic. Optio quibusdam fugit placeat eaque ea! Quis illum harum fugit quibusdam atque autem ipsa, doloribus perspiciatis odio unde nostrum voluptate esse animi vero laboriosam omnis maiores cupiditate soluta consectetur incidunt suscipit tempore? Earum asperiores illum inventore, amet eaque veritatis at explicabo rem dolore aliquam officiis in, natus praesentium? Officiis?
+    </div>
+  </body>
+</html>
