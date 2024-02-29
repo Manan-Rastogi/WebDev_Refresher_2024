@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows and Outline</title>
+
+    <style>
+      .shadow_box {
+        border: 2px solid black;
+        /*  
+            box-shadow: h-offset v-offset blur spread color inset;
+            h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+            blur: The larger the value, the blurrier the shadow.
+            spread: Expands or shrinks the shadow size.
+            color: Defines the shadow color.
+            inset: Makes the shadow inner 
+        */
+
+        box-shadow: 2px 2px 16px 2px #ee1818;
+
+        /* PRO TIP: Set shadow from Inspect element to see what looks good  :)  */
+
+        text-shadow: 2px 2px 4px #888888;
+
+        /* outline is not a part of box model. It does not take space in box model. It will follow border's shape.  */
+        outline: 2px solid red;
+        outline-offset: 5px;    
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shadow_box">I am a box with shadow.</div>
+  </body>
+</html>
