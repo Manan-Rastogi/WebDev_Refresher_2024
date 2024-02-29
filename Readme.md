@@ -91,3 +91,7 @@ https://www.codewithharry.com/tutorial/css-specificity/
 Very Brief but incomplete ans -> *Important > Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector*
 ```
 
+### CSS Display
+```
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+```

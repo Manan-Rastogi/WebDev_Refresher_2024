@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .div_box {
+        border: 2px solid blue;
+      }
+      .span_box {
+        border: 2px solid black;
+      }
+      .inline_div {
+        border: 2px solid lime;
+        /* making a div inline as a span  */
+        display: inline-block; 
+        /* If an element has been declared inline padding top, margin-top, width.... will not work. so we convert inline to inline-block  */
+        padding:10px;
+        margin:30px;
+
+        /* display: none; Vs visibility: hidden; => d:n will remove the space of that box as well, while v:h will keep the space.*/
+
+        /* display:grid or flex are cool. try with inline  */
+      }
+    </style> 
+  </head>
+  <body>
+    <div class="div_box">I am a div box.</div>
+
+    <div class="div_box">I am another div box.</div>
+
+    <span class="span_box"> I am a span box. </span>
+    <span class="span_box"> I am another span box. </span>
+    
+    <div></div>
+
+    <div class="inline_div">I am an inline div box.</div>
+  </body>
+</html>
