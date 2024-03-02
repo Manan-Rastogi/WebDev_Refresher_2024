@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>CSS Positions</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        height: 50vh;
+        width: 20vw;
+        margin: 3px;
+        padding: 5px;
+        border: 2px solid black;
+      }
+
+      /* When position is static, we cannot set the top property. Using position as relative allows to do that */
+
+      .box1 {
+        background-color: aqua;
+        /* this will set box relative to nearest positioned parent. */
+        /*EXCEPTION: transform, filter or perspective can also make an element appear as positioned. So if a parent has any of these 3 property will be considered. */
+        position: absolute;
+        top: 0px;
+      }
+
+      .box2 {
+        background-color: beige;
+        /* play by commenting and yncommenting this position */
+        position: relative;
+        top: 10vh;
+        left: 5vw;
+      }
+
+      .box3 {
+        background-color: lime;
+        /* It will remain fixed even if you scroll down page.  */
+        position: fixed;
+        bottom: 0px;
+        left:1vw;
+        height: 5vh;
+        width:97vw;
+      }
+
+      .box4 {
+        background-color: thistle;
+        /* It will stick to top if you scroll down. Good for Navbars */
+        position: sticky;
+        top: 0px;
+      }
+
+      .parent {
+        margin: 20px;
+        padding: 50px;
+        border: 3px dashed rgb(231, 10, 10);
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box1 box"></div>
+      <div class="box2 box"></div>
+      <div class="box3 box"></div>
+      <div class="box4 box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
