@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <style>
+        /* Variables are declared in :root */
+        :root{
+            --primary_color: rgb(219, 27, 245);
+            --secondary_color: rgb(175, 157, 243);
+        }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul{
+        display: flex;
+        background-color: var(--primary_color);
+      }
+      .items{
+        /* margin:10px; */
+        height: 4vh;
+        padding: 30px;
+        list-style: none;
+      }
+      .main{
+        margin-top: 100px;
+        background-color: var(--secondary_color);
+      }
+      ul>li:first-child{
+        --color:rgb(233, 177, 73);                       /* local variable... limited scope */
+        background-color: var(--color, black);           /* black is fallback color, it will be assigned if color was not present */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li class="items">Home</li>
+        <li class="items">About</li>
+        <li class="items">Contact</li>
+      </ul>
+    </div>
+    <div class="main">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat nemo
+      corrupti quisquam ex sint enim alias explicabo architecto maiores eius,
+      consequuntur dolorum eligendi repellat labore facere aperiam ad vitae,
+      eaque quaerat ipsum expedita! Esse cupiditate temporibus assumenda dolores
+      fugiat quibusdam optio nihil, possimus voluptate dolore veniam neque porro
+      earum libero ipsum consectetur quis maiores odit commodi autem quos
+      quisquam rerum! Fugiat mollitia ab odit vitae accusamus suscipit vel ex
+      vero ipsum voluptates facere voluptate explicabo laudantium omnis, numquam
+      impedit id nemo natus dolorem quidem. Nihil sint ipsam tenetur possimus
+      laboriosam ducimus molestiae, delectus omnis ipsum eos? Voluptatum ab eos,
+      eligendi qui cupiditate temporibus consequatur eveniet necessitatibus
+      assumenda sapiente ullam tenetur quibusdam. Ad, nesciunt impedit harum
+      nulla nisi similique numquam laborum quod quaerat dolorem incidunt,
+      architecto natus corporis? Temporibus est perspiciatis sapiente vel
+      repellendus enim ullam id iste harum, quam corrupti natus nihil sed quae
+      eligendi odio accusantium exercitationem in officiis? Dolore pariatur
+      consequuntur quas dignissimos, voluptatum fugit, doloremque optio
+      sapiente, necessitatibus quam corporis. Possimus quas accusamus error
+      consectetur ex maxime aspernatur illo voluptatem eos asperiores, sed neque
+      deleniti rerum fugit obcaecati cum quo explicabo? Molestiae atque ex ipsum
+      ut maiores, possimus neque accusamus voluptates odit perferendis corrupti
+      corporis. Minima magni voluptate vel iusto eos est sapiente eius
+      voluptatum obcaecati corrupti perspiciatis, numquam labore incidunt porro
+      omnis reiciendis quibusdam, ut sit. Quos dolore asperiores libero et,
+      veniam praesentium dolor quia ab provident nostrum explicabo veritatis!
+    </div>
+  </body>
+</html>
