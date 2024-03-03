@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Queries</title>
+    <style>
+      /*
+        @media not|only mediatype and 
+        (expressions) {
+            CSS-Code;
+        }
+        */
+
+      body {
+        background-color: aquamarine;
+      }
+
+      @media only screen and (max-width: 455px) {
+        body {
+          background-color: aqua;
+        }
+      }
+
+      @media screen and (orientation: portrait){
+        body{
+            color:chocolate;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="d1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi expedita
+      veniam aliquid modi nesciunt incidunt ipsa laudantium, placeat in minima
+      quas blanditiis velit!
+    </div>
+  </body>
+</html>
