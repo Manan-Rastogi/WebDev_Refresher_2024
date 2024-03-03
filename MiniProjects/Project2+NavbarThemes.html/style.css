@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+:root {
+  /* background colors */
+  --p_color: rgb(159, 218, 241);
+  --s_color: grey;
+  --t_color: black;
+
+  --color1: rgb(62, 12, 245);
+  --color2: rgb(243, 7, 137);
+  --color3: black;
+}
+
+.nav {
+  background-color: var(--p_color);
+  color: var(--color3);
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+}
+
+.master_list {
+  display: flex;
+}
+
+.items {
+  list-style: none;
+  margin: 15px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.login_form {
+  padding: 10px;
+  display: flex;
+
+  
+  margin-left: 63%;
+}
+
+
+.inputs{
+    height:20px;
+    margin: 1%;
+}
+
+.login{
+    height:25px;
+    width: 60px;
+    text-align: center;
+    color:var(--color2);
+    padding:2px;
+    margin: 1%;
+}
+
+.login:hover{
+    color: var(--color1);
+    font-weight: bold;  
+}
