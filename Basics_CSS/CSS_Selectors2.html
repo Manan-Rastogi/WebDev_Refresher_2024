@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      .box:first-child {
+        background-color: aquamarine;
+      }
+      /* first line acc to device. Does not account for words or fullstop(.).  */
+      .box:first-line {                     
+        color: magenta;
+      }
+
+      .box::first-letter{
+        font-size: 45px;
+      }
+
+      /* inside boxes class apply to all  */
+      .boxes *{
+        border: 2px solid gray;
+      }
+
+      /* ATTRIBUTE SELECTOR */
+      /* where some attribute is set to some value  */
+      [some_attr="some_val"]{
+        margin-top: 10px;
+        padding: 15px;
+      }
+
+      /* GROUPING */
+      div, .boxes, .box {
+        font-weight: bold;
+      }
+
+      /* nth child  */
+      .box:nth-child(2){
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .box:nth-child(odd){
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .box:nth-last-child(1){
+        background-color: burlywood;
+      }
+
+      /* before after -> insert element through CSS dynamically */
+      .boxes::before{
+        content:"Before we begin, Let me Welcome you all.";
+        color:green;
+      }
+
+      /* SELECTION -> what happen when someone selects  */
+      .box::selection{
+        background-color: black;
+        color: blue;
+      }
+
+      /* placeholder design  */
+      input{
+        margin: 20px;
+      }
+      input::placeholder{
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box" some_attr="some_val">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        recusandae quo tenetur veritatis suscipit ipsum, quis optio maiores sunt
+        nemo nulla odio ducimus enim qui eos sapiente, culpa eius dicta
+        assumenda ex ad! Deserunt dicta nulla, eveniet veritatis delectus
+        cumque.
+      </div>
+      <div class="box">Hey I am a box.</div>
+      <div class="box">Hey I am a box.</div>
+
+      <input type="text" placeholder="username">
+    </div>
+  </body>
+</html>
