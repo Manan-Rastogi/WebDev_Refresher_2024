@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+    <style>
+      .container {
+        border: 2px solid orangered;
+        height: 80vh;
+        width: 98vw;
+        /* default left to right  */
+        display: flex;
+
+        justify-content: center; /* vertical centre acc to main axis (-------->)*/
+        align-items: center; /* horizontal centre acc to cross axis */
+        /* main and cross axis change acc to flex direction */
+
+        /* Above 3 lines are used 70% of time  */
+
+        flex-direction: column; /* change to rows and columns*/
+        /* flex-direction: column-reverse;  */
+      }
+
+      .item {
+        height: 50px;
+        width: 50px;
+        background-color: aqua;
+        margin: 4px;
+        border: 1px solid black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* default flex-grow is 0 */
+        flex-grow: 1;
+      }
+
+      /* one flex taking space of 1 or more items  */
+      .two_x {
+        flex-grow: 2;
+        /* flex-shrink: 2; */
+        /* simiarly flex shrink but with somw condns  */
+
+        /* shifting 1 item  */
+        align-self: flex-end;
+      }
+
+      .container2 {
+        border: 2px solid rgb(224, 183, 0);
+        height: 80vh;
+        width: 98vw;
+        /* default left to right  */
+        display: flex;
+
+        justify-content: center;
+        align-content: center;
+        /* when we have multiple rows/line we use aling-content instead of aling-items  */
+        /* there is no justify-items  */
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* set both flex-direction and flex-wrap together */
+        /* flex-flow: row wrap; */
+
+        /* gap between items  */
+        gap: 10px;
+        /* row-gap: 15px;
+        column-gap: 20px; */
+      }
+
+      .item2 {
+        height: 75px;
+        width: 75px;
+        background-color: rgb(182, 236, 175);
+        /* margin: 4px; */
+        border: 1px solid black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* providing order to items : Lower the order ->early the element comes  but after the unordered one*/
+      .order-1 {
+        order: 1;
+      }
+
+      .order-69 {
+        order: 69;
+      }
+
+      .order-100 {
+        order: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="item">1</div>
+        <div class="item two_x">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+      </div>
+      <br />
+      <div class="container2">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+        <div class="item2 order-1">10</div>
+        <div class="item2">11</div>
+        <div class="item2">12</div>
+        <div class="item2">13</div>
+        <div class="item2">14</div>
+        <div class="item2">15</div>
+        <div class="item2">16</div>
+        <div class="item2 order-100">17</div>
+        <div class="item2">18</div>
+        <div class="item2">19</div>
+        <div class="item2">20</div>
+        <div class="item2">21</div>
+        <div class="item2">22</div>
+        <div class="item2">23</div>
+        <div class="item2">24</div>
+        <div class="item2">25</div>
+        <div class="item2 order-69">26</div>
+        <div class="item2">27</div>
+        <div class="item2">28</div>
+        <div class="item2">29</div>
+        <div class="item2">30</div>
+        <div class="item2">31</div>
+        <div class="item2 order-1">32</div>
+        <div class="item2">33</div>
+        <div class="item2">34</div>
+        <div class="item2">35</div>
+        <div class="item2">36</div>
+        <div class="item2">37</div>
+        <div class="item2">38</div>
+        <div class="item2">39</div>
+        <div class="item2">40</div>
+        <div class="item2">41</div>
+        <div class="item2">42</div>
+        <div class="item2">43</div>
+        <div class="item2">44</div>
+        <div class="item2">45</div>
+        <div class="item2">46</div>
+        <div class="item2">47</div>
+        <div class="item2">48</div>
+        <div class="item2">49</div>
+        <div class="item2">50</div>
+        <div class="item2">51</div>
+        <div class="item2 order-69">52</div>
+        <div class="item2">53</div>
+        <div class="item2">54</div>
+        <div class="item2">55</div>
+        <div class="item2">56</div>
+        <div class="item2">57</div>
+        <div class="item2">58</div>
+        <div class="item2">59</div>
+        <div class="item2">60</div>
+      </div>
+    </main>
+  </body>
+</html>
