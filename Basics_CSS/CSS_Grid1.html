@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grids</title>
+    <style>
+      .container {
+        border: 2px solid black;
+
+        display: grid;
+
+        /* 2 cols of 110 px each */
+        grid-template-columns: [first] 110px [doosra] 110px;
+        /* [name of grid] */
+        
+        grid-template-rows: 100px 100px 100px;
+
+      }
+
+      .item {
+        border: 2px solid violet;
+        height: 55px;
+        width: 55px;
+      }
+
+      /* control grid item placement */
+      .item-4{
+        grid-row: 1/2;            /* b/n 1 and 2            OR          start with 1 to 2*/
+        grid-column: first/doosra; 
+      }
+
+      /* items will overlap */
+      .item-6{
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item item-4">4</div>
+      <div class="item">5</div>
+      <div class="item item-6">6</div>
+    </div>
+  </body>
+</html>

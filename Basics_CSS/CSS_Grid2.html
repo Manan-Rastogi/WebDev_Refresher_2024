@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grids</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        border: 2px solid black;
+        display: grid;
+
+        grid-template-areas:
+          "nav nav nav"
+          "side article article"
+          "footer footer footer";
+      }
+
+      .item {
+        border: 2px solid violet;
+        height: 10vh;
+      }
+
+      .items {
+        border: 2px solid violet;
+        height: 50vh;
+      }
+
+      .item-1 {
+        grid-area: nav;
+      }
+      .item-2 {
+        grid-area: side;
+      }
+      .item-3 {
+        grid-area: article;
+      }
+      .item-4 {
+        grid-area: footer;
+      }
+
+      .container2 {
+        margin: 5vw;
+        border: 2px solid black;
+        display: grid;
+        width: 90vw;
+        height: 30vh;
+
+        /* dividing in 3 equal widths/fractions or any fraction */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* same same  */
+        /* grid-template-columns: repeat(3, 1fr);   */
+        /* grid-template-columns: repeat(3, minmax(100px, 1fr));   */
+
+
+        /* Use gap instead of padding in flexbox and grids  */
+
+        /* to center content in grid */
+        justify-items: center;
+        align-items: center;
+        /* this can also be applied on indivial item  */
+
+        /* justify-content: ; vs justify-items: ;             content will centre entire grid inside container, items will aling individial grid cells  */
+      }
+
+      .fraction {
+        border: 2px solid red;
+        border-radius: 50%;
+
+        height: 50px;
+        width: 50px;
+
+        /* Center the circles within each grid column */
+        /* margin: 0 auto; */
+      }
+
+      .fraction-1 {
+        justify-self: center;
+        align-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Navbar</div>
+      <div class="items item-2">Side</div>
+      <div class="items item-3">Article</div>
+      <div class="item item-4">Footer</div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="container2">
+      <div class="fraction fraction-1"></div>
+      <div class="fraction"></div>
+      <div class="fraction"></div>
+    </div>
+  </body>
+</html>
