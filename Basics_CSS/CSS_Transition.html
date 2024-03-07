@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transtitions</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        height: 50vh;
+        width: 50vw;
+      }
+
+      .box {
+        border: 2px solid blue;
+        background-color: thistle;
+        height: 10vh;
+        width: 15vw;
+        margin: 10px;
+
+        /* TRANSTITION AND IT's 4 IMP FUNCTIONS */
+        transition-property: transform background-color; /* it will act when transform property is changed */
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s;
+
+        /* short way  */
+        /* transition: all 3s ease 1s; */
+      }
+      /* To see this in action go to browser and unselect translate class and enter  */
+
+      .translate {
+        transform: translateX(100%) translateY(100%);
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box translate"></div>
+    </div>
+  </body>
+</html>
