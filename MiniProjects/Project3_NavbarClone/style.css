@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    /* border: 2px solid #9acd32; */
+    height: 10vh;
+    width: 80vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.icon{
+    height: 8vh;
+    width: 10vw;
+    
+}
+
+/* can be better */
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.list_items{
+    list-style: none;
+    display: inline;
+    padding: 0px 0.5vw;
+    color: gray;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.chat_icon{
+    padding-top: 0.5vh;
+    padding-left: 0.5vw;
+    height: 2vh;
+    width: 1vw;
+}
