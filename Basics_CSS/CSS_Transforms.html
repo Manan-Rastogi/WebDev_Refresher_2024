@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transforms</title>
+    <style>
+      .box {
+        border: 2px solid brown;
+        height: 50px;
+        width: 50px;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* rotating the box  */
+        transform: rotate(90deg);
+        /* transform: rotate(0.25turn); */
+        /* transform: rotatex(30deg); */
+
+        /* scaling  */
+        transform: scale(1.2);
+
+        /* skew  */
+        /* transform: skew(30deg); */
+
+        /* translate -- MOST USED  */
+        /* transform: translateX(100%) skew(-20deg); */
+
+        /* we can use  translateX(-100%) for navbars  */
+
+        /* rotate around which point. TIP: check on browser console  */
+        transform: rotate(414deg);
+        transform-origin: 50% 100%;
+      }
+
+      .container {
+        width: 100vw;
+        height: 80vh;
+
+        border: 2px solid darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">B</div>
+    </div>
+  </body>
+</html>
