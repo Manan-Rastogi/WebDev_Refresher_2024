@@ -68,8 +68,10 @@
     background-color: rgb(235, 233, 233);
     border-radius: 5px;
     height: 15vh;
+    min-width: 300px;
     width: 18vw;
     margin: 1vh;
+    /* gap: 1vh; */
 
     display: grid;
     justify-items: center;
@@ -90,6 +92,7 @@
 .btns{
     margin:0px 1vw;  
     height: 3vh;
+    min-width: 100px;
     width: 5vw;
 }
 
@@ -102,5 +105,6 @@
     color: lime;
     font-weight: bold;
     background-color: beige;
+    
 }
 
