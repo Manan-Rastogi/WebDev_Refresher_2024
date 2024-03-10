@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Filters</title>
+
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/filter  -->
+    <style>
+      .container {
+        display: flex;
+      }
+      .filters {
+        height: 600px;
+        padding: 100px;
+
+        /* Filters  */
+        /* filter: blur(5px); */
+      }
+
+      .filter1{
+        filter: sepia();
+      }
+      .filter2{
+        filter: brightness(110%);
+      }
+      .filter3{
+        filter: grayscale(60%);
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="media/something.jpg" alt="" class="filters filter1" />
+
+      <div class="container">
+        <img
+          src="https://assets.telegraphindia.com/telegraph/2020/Sep/1600516175_1jasprit-bumrah-07056e34-83fc-466d-89da-c9cb9645c858.jpg"
+          alt=""
+          class="filters filter2"
+        />
+      </div>
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Virat_Kohli_with_AudiQ7.png/169px-Virat_Kohli_with_AudiQ7.png"
+        alt=""
+        class="filters filter3"
+      />
+    </div>
+  </body>
+</html>
