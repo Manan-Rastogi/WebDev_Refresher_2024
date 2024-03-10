@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        height: 600px;
+        width: 800px;
+        /* background-color: aliceblue; */
+        background-image: url("media/something.jpg");
+        background-position: center center;
+
+        background-repeat: no-repeat;
+
+        /* see on MDN  */
+        background-clip: border-box;
+      }
+
+      img{
+        height: 500px;
+        width: 600px;
+        /* object-fit: contain; */                  /*will contain entire image with aspect ratio*/
+        
+        /* cover the mentioned dimensions provided in this object  */
+        object-fit: cover;                          /*will cut image to fit*/
+
+        /* we can control from where we want to cut  */
+        object-position: bottom right;                   
+        /* object-position: 10px 10ox; */
+
+
+        /* object-fit: fill;   */
+
+        /* object-fit: scale-down; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <img src="media/something.jpg" alt="" /> -->
+    </div>
+  </body>
+</html>
