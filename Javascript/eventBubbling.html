@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .container1{
+            background-color: rgb(228, 184, 39);
+            padding: 30px;
+            border: 1px solid black;
+        }
+
+        .childContainer{
+            background-color: lime;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        .child{
+            background-color: antiquewhite;
+            cursor: pointer;
+            padding: 30px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <section class="childContainer">
+            <div class="child">
+                I am a child.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Event bubbling is like the ripple effect of an event starting from the innermost element (where the event occurs) and moving outwards to the outer elements. It makes it easier to manage and respond to events on a web page efficiently. 
+        // By default evelts listening will be done from child to parent. Means clicking the innermost child will trigger event for it's parent and it's parent's parent and so on.
+        //  To Remove this default behaviour we can stop the event propagation.
+        document.querySelector(".child").addEventListener("click", (event)=>{
+            event.stopPropagation();  // will stop bubbling. limited to child only.
+            alert("child Clicked.")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", (event)=>{
+            alert("child container Clicked.")
+        })
+
+        document.querySelector(".container1").addEventListener("click", (event)=>{
+            alert("container1 Clicked.")
+        })
+
+        function generateRandomColor(){
+            let red= Math.random()*255;
+            let blue= Math.random()*255;
+            let green= Math.random()*255;
+
+            return `rgb(${red}, ${green}, ${blue})`
+        }
+
+        // a func to run in every 3 second
+        let a = setInterval(() => {
+            document.querySelector(".childContainer").style.background = generateRandomColor();
+        }, 1000)  //1000 milisecs
+        
+        console.log(a)
+
+        // clearInterval(a);  //---> will stop the interval
+
+        // run only 1 time
+        let b = setTimeout(() => {
+            document.querySelector(".container1").style.background = generateRandomColor();
+        }, 1000)  //1000 milisecs
+        
+        console.log(b)
+
+    </script>
+</body>
+</html>
