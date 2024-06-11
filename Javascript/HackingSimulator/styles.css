@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    height: 700px;
+    background-color: lime;
+    top: 10px;
+    
+}
+
+#command{
+    position: absolute;
+    left: 10px;
+    color: blue;
+}
