@@ -81,7 +81,7 @@
  *  .append()  --> add element at end
  *  .before() --> before selected attr
  *  
- *  .insertAdjacentHTML(1 out of 4 args, htlm/element)  
+ *  .insertAdjacentHTML(1 out of 4 args, html/element)  
  *   
  *  
  *  .className -> give all classnames

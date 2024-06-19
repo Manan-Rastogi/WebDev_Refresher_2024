@@ -22,7 +22,7 @@ const loadScript = (src, callback) =>{
 loadScript("Hi I am a hacker.", upperPrint)
 
 
-///////////////////////// Callback Hell - Pyramid od Doom - callbacl in a claaback in a claasback -- difficult to manage
+///////////////////////// Callback Hell - Pyramid od Doom - callback in a callback in a callback -- difficult to manage
 
 // Soln to these callbacks is promises
 
