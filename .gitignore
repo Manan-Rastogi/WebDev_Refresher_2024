@@ -2,3 +2,4 @@
 .env
 *.exe
 MiniProjects/Project_5_BallBouncingAnimation/
+node_modules
