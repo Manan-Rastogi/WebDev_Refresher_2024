@@ -58,9 +58,3 @@ Express is preferred over plain Node.js for several reasons:
 4. **Streamlined Server Management:** Express abstracts many low-level details of HTTP server management, enabling developers to focus more on application logic rather than server configuration.
 
 5. **Community and Ecosystem:** Express has a large and active community, providing a wealth of plugins, libraries, and support, making it easier to find solutions and resources for various development needs.
-
-
-
-
-
-
