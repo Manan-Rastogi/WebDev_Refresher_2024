@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express EJS</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace.js"
+    ></script>
+  </head>
+  <body>
+    <sl-tag variant="primary"><%= primary %></sl-tag>
+    <sl-tag variant="success"><%= success %></sl-tag>
+    <sl-tag variant="neutral"><%= neutral %></sl-tag>
+    <sl-tag variant="warning"><%= warning %></sl-tag>
+    <sl-tag variant="danger"><%= danger %></sl-tag>
+
+    <br />
+    <br />
+    <!-- To include another file's component. -->
+    <%- include('card', {arr: arr}); %>
+  </body>
+</html>
