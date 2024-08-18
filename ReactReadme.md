@@ -27,5 +27,50 @@ Props: Pass data to compoments via components
 Inline CSS in jsx has a new and unique syntax:
     style-{{"color":"red"}}
 
-VS Code Extensions:
+
+
+Hooks:
+-   useState() ex-
+-   useEffect(): runs when a component is mounted. 
+    ex- 
+    ```javascript 
+    useEffect(() => {
+        alert("Welcome!!");
+    }, []); // will run on all render.
+
+
+    useEffect(() => {
+        alert("Welcome!!");
+    }, []); // will run only on first render.
+
+
+    useEffect(() => {
+    alert("Navbar color was changed to cyan.");
+  }, [Navbar]); // change on particular component. You can use state as well
+
+
+  useEffect(() => {
+    // component mounted
+  
+    return () => {
+      // component unmounted
+    }
+  }, [component/state])
+
+  
+    ```
+- some initial alerts might run 2 times in dev mode. We can comment the React StrictMode to avoid this.
+
+
+### Some React/Web Terms
+Mount: The process of adding a component to the DOM for the first time.
+Unmount: The process of removing a component from the DOM.
+Render: The process of generating the component’s output to display on the screen.
+
+### VS Code Extensions:
 rafce-  gives an export react arrow function Component
+
+
+### VS code cmds:
+-   code -r ./folderName/
+

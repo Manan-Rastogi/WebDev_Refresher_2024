@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Navbar.css"
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
-      <nav className="navbar">
+      <nav className="navbar" style={{backgroundColor: props.color}}>
         <ul>
             <li>Home</li>
             <li>About</li>
