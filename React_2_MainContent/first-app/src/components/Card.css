@@ -1,0 +1,22 @@
+.card{
+    width: 12vw;
+    height: 22vh;
+    border: 2px solid black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 2px;
+}
+
+.card h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card p{
+    display: flex;
+    justify-content: left;
+    padding: 2px;
+}

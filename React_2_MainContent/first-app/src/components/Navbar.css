@@ -1,0 +1,16 @@
+.navbar{
+    display: flex;
+    padding: 10px;
+    background-color: bisque;
+    position: sticky;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+}
+
+li{
+    list-style-type: none;
+}
