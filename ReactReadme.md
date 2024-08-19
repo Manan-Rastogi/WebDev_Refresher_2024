@@ -58,7 +58,7 @@ useEffect(() => {
     ```
     some initial alerts might run 2 times in dev mode. We can comment the React StrictMode to avoid this.
 
-- useRef() -> persists the value of a variable during rerendering of the component. useEffect is not triggered when useRef is in play on a variable.
+- useRef() -> useRef is a React Hook that lets you reference a value that’s not needed for rendering. It persists the value of a variable during rerendering of the component. useEffect is not triggered when useRef is in play on a variable.
 
 ```javascript
 let a = 1;
@@ -83,6 +83,12 @@ useEffect(() => {
     ```
 > Since ref does not rerender, use it inside a hook that executes on rerender like useEffect()
 check documentation onve for more examples and use cases.
+
+
+
+-- Conditional Rendering: 1st button will be rendered based on value of someVar as true or false.
+{someVar && <button> Displayed </button>}
+someOther  button - <button onClick={()=>setsomeVar(!someVar)}>
 
 ### Some React/Web Terms
 
