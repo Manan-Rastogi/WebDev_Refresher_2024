@@ -240,6 +240,37 @@ You can render lists of items by mapping over an array of data.
 
 ---
 
+## React Events
+### Some Common Examples
+
+#### onClick()
+      <button onClick={handleOnClick}>Click Me</button>
+
+#### Mouse
+```javascript
+const handleOnMouseOver = () => {
+    setbgColor("lime")
+  }
+
+  const handleOnMouseLeave = () => {
+    setbgColor("red")
+  }
+
+      <input type="text" onMouseOver={handleOnMouseOver} onMouseLeave={handleOnMouseLeave} style={{backgroundColor: bgColor}}/>
+
+```
+
+#### input -- onChange
+quite imp to use onChhange with almoost every input
+```javascript
+const handleChange = (e) => {
+    setinputText(e.target.value)             // This changes in async mode. So we will see prev value in clog.
+    console.log(inputText) 
+  }
+      <input type="text" value={inputText} onMouseOver={handleOnMouseOver} onMouseLeave={handleOnMouseLeave} onChange={handleChange} style={{backgroundColor: bgColor}}/>
+
+```
+---
 
 
 ### VS Code Extensions
