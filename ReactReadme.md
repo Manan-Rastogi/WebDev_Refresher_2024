@@ -232,6 +232,63 @@ You can render lists of items by mapping over an array of data.
 
 ---
 
+### React Router
+
+- Allows you to manage navigation and routes in a React application without reloading pages.
+- [react-router](https://reactrouter.com/en/main/start/overview)
+- [react-router-tutorial](https://reactrouter.com/en/main/start/tutorial)
+- Install via npm: `npm install react-router-dom`
+  
+#### Useful Components of React Router:
+
+- **createBrowserRouter**:  
+  - Creates a router that uses the browser's history API to manage navigation.  
+  - Allows you to define routes and nested routes.
+
+- **RouterProvider**:  
+  - Wraps the entire application to provide the routing context.  
+  - Essential for the router to work.
+
+- **useParams**:  
+  - A hook that returns an object of key-value pairs of the dynamic parameters from the current URL.  
+  - Useful for accessing route parameters (e.g., IDs).
+
+- **Link**:  
+  - A component that renders an anchor tag (`<a>`) that navigates to a different route without reloading the page.  
+  - Similar to traditional HTML links but optimized for React Router.
+
+- **NavLink**:  
+  - Similar to `Link`, but it adds styling or classes to the link based on whether it is active.  
+  - Useful for navigation menus where you want to highlight the active page.
+
+- **Outlet**:  
+  - A component used to render the matched child route's element.  
+  - Useful when you have nested routes and need to display child components.
+
+#### Additional Concepts:
+
+- **Routes & Route**:  
+  - `Routes` is a container for all your `Route` components.  
+  - `Route` defines a path and the component that should be rendered when the path matches.
+
+- **Switch (v5)**:  
+  - In earlier versions, `Switch` was used to render the first matching route.  
+  - In v6, it's replaced by `Routes` which behaves similarly but offers more flexibility.
+
+- **Redirect (v5) / Navigate (v6)**:  
+  - Used to redirect users from one route to another.  
+  - In v6, `Redirect` is replaced with `Navigate`.
+
+- **useNavigate**:  
+  - A hook that provides a function to programmatically navigate to a different route.  
+  - Useful for redirecting users after an action (e.g., form submission).
+
+These notes cover the essential components and concepts of React Router, making it easier to manage navigation in your React applications.
+
+
+
+
+
 ### React/Web Terms
 
 - **Mount**: Adding a component to the DOM for the first time.
