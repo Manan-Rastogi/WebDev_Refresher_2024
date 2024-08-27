@@ -116,7 +116,7 @@ Example:
 
 ---
 
-### Hooks
+### React Hooks
 
 #### `useState()`
 This hook is used to create and manage state in functional components (as seen in the state example above).
@@ -190,6 +190,62 @@ The `useRef()` hook allows you to persist values across renders without causing 
 
   return <button ref={buttonRef}>Click me</button>;
   ```
+
+#### `useContext()`
+- Allows sharing state or data between components without passing props down manually at every level.
+- `createContext()` creates a Context object that holds the value.
+- `useContext()` is used to consume the value within child components.
+- Example:
+    ```javascript
+    //context/counter.js
+    import React, { createContext } from 'react';
+
+    const CounterContext = createContext();            // Create Context
+
+    export default CounterContext;
+
+    //app.jsx
+    <counterContext.Provider value={count}>              
+            <Navbar></Navbar>
+          </counterContext.Provider>
+
+    // Using count in a child - Component1.js
+    const Component1 = () => {
+        const counter = useContext(counterContext)      // Using Context
+      return (
+        <div>
+          {counter}
+        </div>
+      )
+    }
+    ```
+  - Context: `CounterContext` is created to store a counter value.
+  - Provider: The context provider `CounterContext.Provider` wraps components to share the `count` value.
+  - Consumer: Inside `Component1`, `useContext(CounterContext)` accesses the `count` from the context.
+- The state `count` will be available in all children of `Navbar`.
+
+#### `useMemo()`
+- Optimizes performance by memoizing expensive calculations to prevent unnecessary recalculations on every render.
+- Usage:
+  ```javascript
+  const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+  ```
+- Only recalculates `computeExpensiveValue` if `a` or `b` changes.
+- Useful for improving performance in components with expensive computations or many re-renders.
+
+#### `useCallback()`
+- Prevents unnecessary re-creations of functions, improving performance in components with many re-renders.
+- Usage:
+  ```javascript
+  const memoizedCallback = useCallback(() => {
+    doSomething(a, b);
+  }, [a, b]);
+  ```
+- `useCallback()` returns the memoized version of the callback, only updating if `a` or `b` changes.
+- Often used when passing callbacks to optimized child components that rely on reference equality to avoid unnecessary renders.
+defn and use case
+example
+
 
 ---
 
