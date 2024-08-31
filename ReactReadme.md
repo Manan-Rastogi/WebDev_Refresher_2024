@@ -385,6 +385,28 @@ const handleChange = (e) => {
 ```
 ---
 
+### React Forms
+- [react-hook-form](https://react-hook-form.com/)
+
+
+### Redux
+- **What and Why?**
+  - **What**: Redux is a state management library for JavaScript apps, particularly React, providing a centralized store for all application states.
+  - **Why**: It helps manage complex state logic across the application, making state predictable, easy to debug, and consistent.
+- **Installation**: `npm install @reduxjs/toolkit`
+- **Useful Links**:
+  - [Redux Toolkit Introduction](https://redux-toolkit.js.org/introduction/getting-started)
+  - [Redux Toolkit Quick Start Tutorial](https://redux-toolkit.js.org/tutorials/quick-start)
+- **Important Parts**
+  - **Store**: The centralized state container that holds the entire state of your application.
+  - **Reducers**: Functions that determine how the state changes in response to actions. They accept the current state and an action as arguments and return a new state.
+    - **State**: Represents the current state of the app managed by Redux.
+    - **Action**: An object that describes what happened, typically including a `type` field and any relevant data.
+  - **Slice**: A collection of Redux reducer logic and actions for a single feature of your application. Each slice manages a specific part of the state.
+  - **nanoid**: A small, secure, URL-friendly unique string ID generator for JavaScript. It's often used in Redux slices to generate unique IDs for actions or entities.
+  - **useSelector**: A hook that allows you to extract data from the Redux store state using a selector function.
+  - **useDispatch**: A hook that gives you access to the `dispatch` function, which you use to send actions to the Redux store to update the state.
+
 
 ### VS Code Extensions
 
